@@ -1,0 +1,365 @@
+* {
+    margin: 0;
+    padding: 0;
+    
+}
+@media (max-width: 600px){
+    body {
+        margin: 0;
+        padding: 0;
+        color: white;
+        text-shadow: 2px 2px 4px #000000;
+        height: 100vh;
+        width: 100vw;
+        background-color: black;
+    }
+    .app-container {
+        background-color: black;
+        display: grid;
+        grid-template-rows: 5vh 95vh;
+        width: 100vw;
+        height: 100vh;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    .navContainer {
+        grid-row: 1;
+        display: flex;
+        justify-content: flex-start;
+        width: 100%;
+        height: 30px;
+        align-items: center;
+        background-color: black;
+    }
+    .navContainer > button:nth-child(1) {
+        justify-self: flex-start;
+        z-index: 2;
+    }
+    .hiddenMenu {
+        grid-row: 1 / 3;
+        z-index: 1;
+    }
+    .galaxyContainer {
+        grid-row: 2;
+        height: 100vh;
+        width: 100vw;
+        background-color: black;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+    .galaxyTitle {
+        color: rgb(61, 189, 221);
+        margin-left: 40px;
+        font-size: 2.5em;
+        grid-row: 1;
+        /* margin-top: -15px; */
+    }
+    .galaxyDescription {
+        margin: 50px;
+        color: rgb(181, 224, 235);
+        font-size: 2vh;
+        grid-row: 2;
+        position: absolute;
+    }
+    #earth-div {
+        width: 100vw;
+        height: 100vh;
+        /* background-size: contain; */
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+    #bottomOfImage {
+        /* margin-top: 1vw; */
+        color: rgb(181, 224, 235);;
+        font-size: 3vh;
+        text-align: center;
+    }
+    #bottomOfGalaxyImage {
+        /* margin-top: 1vw; */
+        color: rgb(181, 224, 235);;
+        font-size: 3vh;
+        text-align: center;
+    }
+    .HDImgBtn {
+        background-color: black;
+        color: white;
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        z-index: 3;
+        width: 10%
+    }
+    /* #HDButton {
+
+    } */
+    .nav {
+        display: grid;
+        grid-row: 1;
+        background-image: url("https://images.unsplash.com/photo-1531503364905-d759abb805af?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80");
+        background-size: cover;
+        background-position: center;
+        height: 100vh;
+        width: 100vw;
+        position: absolute;
+        transition: opacity 1s linear, z-index 1s linear;
+    }
+    .nav > .groundLink {
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        color: rgb(173, 145, 219);
+        font-size: 8vw;
+        text-decoration: none;
+        margin-top: 50px;
+        margin-left: 10%;
+        margin-bottom: 100px;
+    }
+    .nav > .earthLink {
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        color: rgb(173, 145, 219);
+        font-size: 8vw;
+        text-decoration: none;
+        margin-bottom: 100px;
+        margin-left: 30%;
+    }
+    .nav > .galaxyLink {
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        color: rgb(173, 145, 219);
+        font-size: 8vw;
+        text-decoration: none;
+        margin-bottom: 100px;
+        margin-left: 50%;
+    }
+    .nav-open {
+        opacity: 1;
+        position: absolute;
+        z-index: 5;
+    }
+    .nav-closed {
+        opacity: 0;
+        position: absolute;
+        z-index: -1;
+    }
+    .nav > button {
+        background-color: black;
+        color: white;
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        width: 10%;
+    }
+    #menuBtn {
+        width: 10%;
+        background-color: black;
+        color: white;
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    }
+    .groundContainer {
+        color: rgb(163, 221, 69);
+        grid-row: 2;
+        height: 100vh;
+        width: 100vw;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        text-align: center;
+        text-shadow: 
+                -1px -1px 0 #000,
+                 1px -1px 0 #000,
+                -1px 1px 0 #000,
+                1px 1px 0 #000;
+    }
+    .groundContainer h1 {
+        font-size: 2.5em;
+        margin: 3vw;
+    }
+   .groundContainer > .bottomOfDiv {
+       margin: 0;
+   }
+    .scrollContainer {
+        height: 300px;
+        overflow-y: scroll;
+        font-size: 12vw;
+        margin: 4vh 2vw 0 2vw;
+    }
+   
+    .groundContainer > #bottomOfDiv {
+        margin: 3vw;
+        display: inline;
+    }
+    .groundHref {
+        color: rgb(143, 199, 54);
+        padding: 10vw;
+        margin: 10vw;
+    }
+}
+    @media (min-width: 601px){
+
+
+
+    body {
+        margin: 0;
+        padding: 0;
+        color: white;
+        text-shadow: 2px 2px 4px #000000;
+        height: 100vh;
+        width: 100vw;
+        background-color: black;
+    }
+    .app-container {
+        background-color: black;
+        display: grid;
+        grid-template-rows: 5vh 95vh;
+        width: 100vw;
+        height: 100vh;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    .navContainer {
+        grid-row: 1;
+        display: flex;
+        justify-content: flex-start;
+        width: 100%;
+        height: 30px;
+        align-items: center;
+        background-color: black;
+    }
+    .navContainer > button:nth-child(1) {
+        justify-self: flex-start;
+        z-index: 2;
+    }
+    .hiddenMenu {
+        grid-row: 1 / 3;
+        z-index: 1;
+    }
+    .galaxyContainer {
+        grid-row: 2;
+        height: 100vh;
+        width: 100vw;
+        background-color: black;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+    .galaxyTitle {
+        color: rgb(61, 189, 221);
+        margin-left: 40px;
+        margin-top: 10vh;
+        font-size: 8vw;
+        grid-row: 1;
+        /* margin-top: -15px; */
+    }
+    .galaxyDescription {
+        margin: 50px;
+        color: rgb(181, 224, 235);
+        font-size: 3vh;
+        grid-row: 2;
+        position: absolute;
+    }
+    #earth-div {
+        width: 100vw;
+        height: 100vh;
+        /* background-size: contain; */
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+    #bottomOfImage {
+        margin-top: 5vw;
+        color: rgb(181, 224, 235);;
+        font-size: 3vh;
+        text-align: center;
+    }
+    .HDImgBtn {
+        background-color: black;
+        color: white;
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        z-index: 3;
+        width: 10%
+    }
+    .nav {
+        display: grid;
+        grid-row: 1;
+        background-image: url("https://images.unsplash.com/photo-1531503364905-d759abb805af?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80");
+        background-size: cover;
+        background-position: center;
+        height: 100vh;
+        width: 100vw;
+        position: absolute;
+        transition: opacity 1s linear, z-index 1s linear;
+    }
+    .nav > .groundLink {
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        color: rgb(173, 145, 219);
+        font-size: 6vw;
+        text-decoration: none;
+        margin-top: 50px;
+        margin-left: 10%;
+        margin-bottom: 100px;
+    }
+    .nav > .earthLink {
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        color: rgb(173, 145, 219);
+        font-size: 6vw;
+        text-decoration: none;
+        margin-bottom: 100px;
+        margin-left: 30%;
+    }
+    .nav > .galaxyLink {
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        color: rgb(173, 145, 219);
+        font-size: 6vw;
+        text-decoration: none;
+        margin-bottom: 100px;
+        margin-left: 45%;
+    }
+    .nav-open {
+        opacity: 1;
+        position: absolute;
+        z-index: 5;
+    }
+    .nav-closed {
+        opacity: 0;
+        position: absolute;
+        z-index: -1;
+    }
+    .nav > button {
+        background-color: black;
+        color: white;
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        width: 10%;
+        height: 20px;
+    }
+    #menuBtn {
+        width: 10%;
+        background-color: black;
+        color: white;
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    }
+    .groundContainer {
+        color: rgb(163, 221, 69);
+        grid-row: 2;
+        height: 100vh;
+        width: 100vw;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        text-align: center;
+        text-shadow: 3px 3px 5px #000000;
+    }
+    .groundContainer h1 {
+        font-size: 6vw;
+        margin: 3vw;
+    }
+    .groundContainer h6 {
+        font-size: 4vw;
+        margin: 3vw;
+    }
+    .groundContainer p {
+        font-size: 2vw;
+    }
+    .groundContainer > #bottomOfDiv {
+        margin: 1vw;
+    }
+    .groundHref {
+        color: rgb(143, 199, 54);
+        padding: 10vw;
+        margin: 10vw;
+    }
+}
