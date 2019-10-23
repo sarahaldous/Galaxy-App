@@ -28,25 +28,6 @@ class EarthProvider extends Component {
         const selectedImage = this.state.images[Math.floor(Math.random() * this.state.images.length)];
         return selectedImage
     }
-    
-    // getEarthData = () => {
-    //     axios.get(`https://api.nasa.gov/EPIC/api/enhanced/all?api_key=${nasa}`).then((response) => {
-    //         console.log(response.data)
-    //         const {
-    //             caption,
-    //             image,
-    //             date
-    //         } = response.data
-    //         this.setState({
-    //             caption,
-    //             image,
-    //             date,
-    //         })
-            
-    //     }).catch(function(error){
-    //         console.log(error)
-    //     })
-    // }
    
     infoToggler = () => {
         this.setState({infoDisplayed: !this.state.infoDisplayed})

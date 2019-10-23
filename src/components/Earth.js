@@ -1,8 +1,6 @@
 import React, {Component} from 'react'
 import { withPlanet} from "../context/EarthProvider"
-// import moment from 'moment'
 
-// const formatted = moment(new Date()).format().split("T")[0]
 
 class Earth extends Component {
     constructor(){
@@ -12,9 +10,7 @@ class Earth extends Component {
                 
             }
     }
-    // componentDidMount(){
-    //     this.props.getEarthData()
-    // }
+
     render(){
         console.log(this.props)
 
@@ -22,22 +18,21 @@ class Earth extends Component {
     return (
         <div className="earthContainer" style={{backgroundImage: `url(${(this.props.randomEarthPhoto())})`}} id="earth-div">
         
+        { this.props.groundInfoDisplayed ? 
+           <div className="mainText">
+           
+           <h3>Welcome to the Galaxy!</h3>
+            <h3>This site provides an easy way to explore the planet and the galaxy from wherever you are!</h3>
+            </div>
+          
+            :
+            null
+           }
+            
         </div>
+        
     )
 }
 }
 export default withPlanet(Earth)
 
-// this.props.enhancedToggle ? `url(${this.props.hdurl})` : `url(${this.props.image})`}} 
-            // { this.props.infoDisplayed ? 
-            // <div>
-            // <h3 className="earthTitle">{this.props.caption}</h3>
-            
-            // <div id="bottomOfImage">
-            // <p>{this.props.date}</p>
-            // </div>
-
-            // </div>
-            // :
-            // null
-            // }

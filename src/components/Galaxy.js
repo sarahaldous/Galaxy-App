@@ -15,6 +15,7 @@ class Galaxy extends Component {
     render(){
     return (
         <div className="galaxyContainer" style={{backgroundImage: this.props.hdToggle ? `url(${this.props.hdurl})` : `url(${this.props.url})`}} id="galaxy-div">
+             <button id="HDButton" className="HDImgBtn" onClick={this.props.hdToggler}>View in {this.props.hdToggle ? "SD" : "HD"}</button>
            { this.props.infoDisplayed ? 
            <div>
            <h3 className="galaxyTitle">{this.props.title}</h3>
