@@ -16,22 +16,19 @@ class EarthProvider extends Component {
             'https://images.unsplash.com/photo-1483651646696-c1b5fe39fc0e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80', 
             'https://images.unsplash.com/photo-1520113412646-04fc68c0bc21?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1502&q=80', 
             'https://images.unsplash.com/photo-1540198163009-7afda7da2945?ixlib=rb-1.2.1&auto=format&fit=crop&w=582&q=80', '' ],
-            // date:'',
-            // caption:'',
-            infoDisplayed: false,
-            // hdToggle:false,
+            infoDisplayed: true,
             menuShowing: false,
-            
         }
     }
     randomEarthPhoto = () => {
         const selectedImage = this.state.images[Math.floor(Math.random() * this.state.images.length)];
         return selectedImage
+        
     }
    
-    infoToggler = () => {
-        this.setState({infoDisplayed: !this.state.infoDisplayed})
-    }
+    // earthInfoToggler = () => {
+    //     this.setState({earthInfoDisplayed: !this.state.earthInfoDisplayed})
+    // }
     
     menuToggler = () => {
         this.setState(prevState => ({
@@ -47,8 +44,7 @@ class EarthProvider extends Component {
                 value={{
                     ...this.state,
                     getEarthData:this.getEarthData,
-                    infoToggler:this.infoToggler,
-                    // hdToggler:this.hdToggler,
+                    earthInfoToggler:this.earthInfoToggler,
                     menuToggler:this.menuToggler,
                     randomEarthPhoto:this.randomEarthPhoto
                 }}>

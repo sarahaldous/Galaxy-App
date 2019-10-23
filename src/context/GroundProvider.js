@@ -1,5 +1,4 @@
 import React, {Component} from 'react'
-// import axios from 'axios'
 const nationalGeographic = (process.env.REACT_APP_NG_KEY)
 const axios = require('axios')
 
@@ -9,12 +8,6 @@ class GroundProvider extends Component {
     constructor(){
         super()
         this.state = {
-            // author: '',
-            // title: '',
-            // description: '',
-            // url: '',
-            // urlToImage: '',
-            // publishedAt: '',
             groundInfoDisplayed: false,
             menuShowing: false,
             newsArray: [],
@@ -23,7 +16,7 @@ class GroundProvider extends Component {
     }
     getGroundData = () => {
         axios.get(`https://newsapi.org/v2/top-headlines?sources=national-geographic&apiKey=${nationalGeographic}`).then((response) => {
-        console.log(response.data.articles)    
+           
         this.setState({
                 
                 newsArray: response.data.articles
@@ -38,19 +31,6 @@ class GroundProvider extends Component {
         const selectedArticle = this.state.newsArray[Math.floor(Math.random() * this.state.newsArray.length)];
         this.setState ({selectedArticle})
     }
-   
-    // newsArrayContent = newsArray.map(selectedArticle => {
-    //     return {
-    //         sourceName: selectedArticle.source.name,
-    //         author: selectedArticle.author,
-    //         title: selectedArticle.title,
-    //         description: selectedArticle.description,
-    //         url: selectedArticle.url,
-    //         urlToImage: selectedArticle.urlToImage,
-    //         publishedAt: selectedArticle.publishedAt
-    //     }
-    
-    // })
     
     groundInfoToggler = () => {
         this.setState({groundInfoDisplayed: !this.state.groundInfoDisplayed})

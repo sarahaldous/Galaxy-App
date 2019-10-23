@@ -12,7 +12,7 @@ const Nav = props => {
             <button id="menuBtn" onClick={props.menuToggler}>Menu</button>
            
             { props.location.pathname === '/galaxy' && <button onClick={props.infoToggler} className="HDImgBtn">More Info</button> }
-            { props.location.pathname === '/' && <button onClick={props.infoToggler} className="HDImgBtn">More Info</button> }
+            {/* { props.location.pathname === '/' && <button onClick={props.infoToggler} className="HDImgBtn">More Info</button> } */}
             { props.location.pathname === '/ground' && <button onClick={props.groundInfoToggler} className="HDImgBtn">More Info</button> }
         </div>
     )
